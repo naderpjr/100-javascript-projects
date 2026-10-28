@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roll Simulator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <main class="app">
+        <header class="header">
+            <h1>Dice Roll Simulator</h1>
+            <p>Roll the dice and test your luck.</p>
+        </header>
+
+        <section class="dice-card">
+            <div class="dice" id="dice" aria-label="Dice showing five">&#9860;</div>
+            <button id="roll-button" type="button">Roll Dice</button>
+        </section>
+
+        <section class="history-section">
+            <div class="section-header">
+                <h2>Roll History</h2>
+                <span id="roll-count">0 rolls</span>
+            </div>
+
+            <ul id="roll-history" aria-live="polite"></ul>
+            <p class="empty-state" id="empty-state">Your rolls will appear here.</p>
+        </section>
+    </main>
+</body>
+
+</html>
