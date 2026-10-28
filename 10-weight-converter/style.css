@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #18181b;
+    background: #fafafa;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    display: grid;
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+    padding: 24px;
+    place-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 440px;
+    padding: 28px;
+    border: 1px solid #e4e4e7;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 4%);
+}
+
+.header {
+    margin-bottom: 28px;
+}
+
+.heading {
+    margin: 0;
+    font-size: 27px;
+    font-weight: 650;
+    letter-spacing: -0.8px;
+}
+
+.header p {
+    margin: 10px 0 0;
+    color: #71717a;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.input-container label {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 44px;
+    padding: 0 12px;
+    border: 1px solid #e4e4e7;
+    border-radius: 7px;
+    background: #ffffff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-wrapper:focus-within {
+    border-color: #a1a1aa;
+    box-shadow: 0 0 0 3px rgb(161 161 170 / 15%);
+}
+
+.input {
+    width: 100%;
+    min-width: 0;
+    padding: 11px 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #18181b;
+    font: inherit;
+    font-size: 14px;
+}
+
+.input::placeholder {
+    color: #a1a1aa;
+}
+
+.unit {
+    color: #71717a;
+    font-size: 13px;
+}
+
+.result-card {
+    margin-top: 22px;
+    padding: 18px;
+    border: 1px solid #e4e4e7;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+.result-label {
+    color: #71717a;
+    font-size: 12px;
+}
+
+.result-value {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin: 10px 0 0;
+    font-size: 32px;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -1px;
+    overflow-wrap: anywhere;
+}
+
+.result-unit {
+    color: #71717a;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+
+.error {
+    min-height: 18px;
+    margin: 10px 0 0;
+    color: #dc2626;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 16px;
+    }
+
+    .container {
+        padding: 22px 18px;
+    }
+
+    .heading {
+        font-size: 24px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .input-wrapper {
+        transition: none;
+    }
+}

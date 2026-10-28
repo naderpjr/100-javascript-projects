@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <main class="container">
+        <header class="header">
+            <h1 class="heading">Weight Converter</h1>
+            <p>Convert pounds to kilograms instantly.</p>
+        </header>
+
+        <div class="input-container">
+            <label for="input">Weight in pounds</label>
+            <div class="input-wrapper">
+                <input type="number" id="input" class="input" min="0" step="any" placeholder="Enter weight"
+                    inputmode="decimal">
+                <span class="unit">lb</span>
+            </div>
+        </div>
+
+        <section class="result-card" aria-live="polite">
+            <span class="result-label">Weight in kilograms</span>
+            <p class="result-value"><span id="result">—</span><span class="result-unit">kg</span></p>
+        </section>
+
+        <p class="error" id="error" role="alert"></p>
+    </main>
+</body>
+
+</html>
