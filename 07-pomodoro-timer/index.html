@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <main class="container">
+        <header class="header">
+            <h1 class="title">Pomodoro Timer</h1>
+            <p class="subtitle">Focus on what matters.</p>
+        </header>
+
+        <section class="timer-card" aria-label="Pomodoro countdown">
+            <p class="timer" id="timer" role="timer" aria-live="off">25:00</p>
+            <p class="timer-label" id="timer-label">Ready to focus</p>
+
+            <div class="button-wrapper">
+                <button id="start" type="button">Start</button>
+                <button id="stop" type="button" disabled>Stop</button>
+                <button id="reset" type="button">Reset</button>
+            </div>
+        </section>
+
+        <p class="footer-text">25 minutes of focus. One step at a time.</p>
+    </main>
+</body>
+
+</html>

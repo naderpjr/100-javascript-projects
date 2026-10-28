@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #18181b;
+    background: #fafafa;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    display: grid;
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+    padding: 24px;
+    place-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 440px;
+    margin: 0 auto;
+}
+
+.header {
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.title {
+    margin: 0;
+    font-size: clamp(27px, 5vw, 34px);
+    font-weight: 650;
+    letter-spacing: -1.2px;
+}
+
+.subtitle {
+    margin: 10px 0 0;
+    color: #71717a;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.timer-card {
+    padding: 36px 24px 28px;
+    border: 1px solid #e4e4e7;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 4%);
+    text-align: center;
+}
+
+.timer {
+    margin: 0;
+    font-size: clamp(64px, 15vw, 84px);
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -4px;
+    line-height: 1.2;
+}
+
+.timer-label {
+    margin: 12px 0 28px;
+    color: #71717a;
+    font-size: 13px;
+}
+
+.button-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+button {
+    min-height: 40px;
+    padding: 0 18px;
+    border: 1px solid #e4e4e7;
+    border-radius: 7px;
+    background: #ffffff;
+    color: #18181b;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s, opacity 0.2s;
+}
+
+#start {
+    border-color: #18181b;
+    background: #18181b;
+    color: #fafafa;
+}
+
+#start:hover:not(:disabled) {
+    background: #27272a;
+}
+
+#stop:hover:not(:disabled),
+#reset:hover:not(:disabled) {
+    background: #f4f4f5;
+}
+
+button:focus-visible {
+    outline: 2px solid #71717a;
+    outline-offset: 3px;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.45;
+}
+
+.footer-text {
+    margin: 20px 0 0;
+    color: #a1a1aa;
+    font-size: 12px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+@media (max-width: 400px) {
+    .timer-card {
+        padding: 30px 14px 24px;
+    }
+
+    .button-wrapper {
+        gap: 6px;
+    }
+
+    button {
+        padding: 0 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    button {
+        transition: none;
+    }
+}
