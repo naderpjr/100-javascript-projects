@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <main class="container">
+        <header class="header">
+            <h1>Stopwatch</h1>
+            <p>Measure every second.</p>
+        </header>
+
+        <section class="stopwatch-card">
+            <div class="status">
+                <span class="status-dot" id="status-dot"></span>
+                <span id="status-text">Ready</span>
+            </div>
+
+            <div id="timer" role="timer" aria-label="Elapsed time">00:00:00.00</div>
+
+            <div id="buttons">
+                <button id="start" type="button">Start</button>
+                <button id="stop" type="button" disabled>Stop</button>
+                <button id="reset" type="button">Reset</button>
+            </div>
+        </section>
+
+        <p class="footer-text">Time is measured locally in your browser.</p>
+    </main>
+</body>
+
+</html>
